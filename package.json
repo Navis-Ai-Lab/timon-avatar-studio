@@ -1,0 +1,113 @@
+{
+  "name": "timon-avatar-studio",
+  "version": "0.1.0",
+  "description": "Timon plugin: generate agent avatars from a text prompt, locally on the CPU (MiniT2I, MIT), and apply them to your agents.",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js"
+  },
+  "files": [
+    "lib",
+    "assets",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "LICENSE-MiniT2I.txt",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=22.2"
+  },
+  "dependencies": {
+    "onnxruntime-node": "1.31.1"
+  },
+  "timon": {
+    "id": "avatar-studio",
+    "apiVersion": 15,
+    "kind": [
+      "page"
+    ],
+    "label": "Avatar Studio",
+    "description": "Generate agent avatars from a text prompt, locally on the CPU (MiniT2I, MIT), then apply them to your agents in one click.",
+    "author": "Navis AI Lab",
+    "icon": "icon.svg",
+    "route": "/avatars",
+    "permissions": [
+      "storage",
+      "settings",
+      "agents:read",
+      "agents:manage",
+      "http:outbound"
+    ],
+    "http": {
+      "hosts": [
+        {
+          "host": "huggingface.co",
+          "why": "One-time download of the MiniT2I model (313 MB)."
+        },
+        {
+          "host": "*.hf.co",
+          "why": "Hugging Face CDN the model download is redirected to."
+        }
+      ]
+    },
+    "client": {
+      "slots": [
+        "page",
+        "nav.item",
+        "agent.menu.item",
+        "settings.section"
+      ],
+      "external": [
+        "react",
+        "@timon/ui"
+      ],
+      "mode": "esm"
+    },
+    "license": {
+      "required": false
+    },
+    "cover": "assets/cover.jpg",
+    "screenshots": [
+      "assets/examples.jpg"
+    ],
+    "settings": [
+      {
+        "key": "threads",
+        "type": "number",
+        "label": "CPU threads (0 = all cores but one)",
+        "default": 0
+      },
+      {
+        "key": "presets",
+        "type": "string",
+        "label": "Presets (JSON, empty = defaults)",
+        "default": ""
+      }
+    ]
+  },
+  "author": "Navis AI Lab",
+  "homepage": "https://github.com/Navis-Ai-Lab/timon-avatar-studio#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Navis-Ai-Lab/timon-avatar-studio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Navis-Ai-Lab/timon-avatar-studio/issues"
+  },
+  "keywords": [
+    "timon",
+    "timon-plugin",
+    "avatar",
+    "text-to-image",
+    "onnx",
+    "minit2i"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "check": "timon plugin check ."
+  }
+}
