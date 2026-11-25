@@ -2,7 +2,7 @@
 
 ## 0.1.0 — first public release
 
-- Avatars page: prompt, presets, seed, per-account gallery with hover details (prompt, seed, age)
+- Avatars page: prompt, presets (including Timon-style meerkats), seed, per-account gallery with hover details (prompt, seed, age)
 - Set any image as an agent's picture in one click
 - "Generate an avatar" entry in every agent's menu
 - Settings pane: CPU thread count, editable presets

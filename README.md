@@ -2,10 +2,10 @@
 
 Generate avatars for your [Timon](https://timon-ai.com) agents from a text prompt, **locally on the CPU**, and apply them to an agent in one click. It adds an **Avatars** page to the side menu.
 
-![Six avatars generated with the default presets: mission commander, inspector, coder, reviewer, tester and a pixel-art detective](assets/examples.jpg)
+![Six meerkat avatars generated with the plugin: commander, lookout, coder, reviewer, tester and planner](assets/examples.jpg)
 
 - **Prompt or preset → 512×512 image** in about 5 s on a desktop CPU. No GPU, no API key, no cloud service: the image model runs inside your Timon daemon.
-- **Presets made for agent avatars**: mission commander, coder, reviewer, planner, scheduler, tester… in an 80s-cartoon style, plus chibi, 3D and pixel art. Administrators edit the list in *Settings › Plugins › Avatar Studio*.
+- **Presets made for agent avatars**: Timon-style meerkats (commander, lookout, reviewer), mission commander, coder, reviewer, planner, scheduler, tester… in an 80s-cartoon style, plus chibi, 3D and pixel art. Administrators edit the list in *Settings › Plugins › Avatar Studio*.
 - **A seed per image**: keep it and change the end of the prompt to get variations of the same character.
 - **A gallery per account**. Hover an image to read its prompt, seed and age, reuse them, download the PNG, delete it, or **set it as an agent's avatar**.
 - **"Generate an avatar"** in each agent's menu (*…* on the TIMs list) opens the page with that agent preselected.

@@ -1,7 +1,7 @@
 First public release of **Timon Avatar Studio**: generate avatars for your agents from a text prompt, locally on the CPU, and apply them in one click.
 
 - An **Avatars** page: a prompt or a preset gives a 512×512 image in ~5 s on a desktop CPU (20–60 s on a small server)
-- Presets made for agent avatars (mission commander, coder, reviewer, planner, tester…, 80s cartoon, chibi, 3D, pixel art), editable in the plugin settings
+- Presets made for agent avatars (Timon-style meerkats, mission commander, coder, reviewer, planner, tester…, 80s cartoon, chibi, 3D, pixel art), editable in the plugin settings
 - A seed per image for variations of the same character; a gallery per account with the prompt on hover
 - **Set as avatar** on any image, and **Generate an avatar** in each agent's menu
 - CPU threads setting (all cores but one by default), English and French
